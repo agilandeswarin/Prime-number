@@ -1,0 +1,32 @@
+RECURSION : The function calls itself called recursion.
+
+Find the Prime or not a prime in Recursion?
+
+PROGRAM
+package Recursion;
+import java.util.Scanner;
+
+	public class Pract {
+		public static void main(String[] args) {
+			
+			int i=2;
+			boolean isprime=true;
+			int n=33;
+			isprime=checkprime(n, i);
+			String result=isprime?"Prime":"Not a prime";
+			System.out.println(n+":"+result);
+			
+		}
+		
+		private static boolean checkprime(int n,int i) {
+			if(n<2)
+				return false;
+			if(n==i)
+				return true;
+			
+			if(n%i==0)            //Base case-> it will receive the end result
+				return false;
+			i+=1;
+			return checkprime(n,i);  //Recursion-> the Function calls itself
+			}
+			}
